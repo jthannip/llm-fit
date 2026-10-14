@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-fit"
+version = "0.1.0"
+description = "Scan your computer and find the best open-source LLMs it can run."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "John Thannipara" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["llm", "ollama", "local-ai", "hardware", "gpu", "vram"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+
+[project.optional-dependencies]
+full = ["psutil"]
+
+[project.scripts]
+llm-fit = "llm_fit:main"
+
+[tool.setuptools]
+py-modules = ["llm_fit"]
